@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tipLite - a Lightweight &amp; Simple jQuery Tooltip plugin</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="en_US" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<script src="http://www.google.com/jsapi"></script>
+	<script>
+		google.load("jquery", "1.6");
+	</script>
+
+	<script src="tiplite.js"></script>
+	<link rel="stylesheet" href="tiplite.css" media="all" />
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	color: #666;
+}
+html,body {
+	width: 100%;
+	background: #FFFFFF;
+}
+#wrapper {
+	margin: 50px auto;
+	width: 600px;
+	background: #EFEFEF;
+	display: block;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+#wrapper > #content {
+	padding: 10px;
+	display: block;
+}
+#wrapper > #content h1 {
+	padding: 10px;
+	display: block;
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #999;
+	text-align: center;
+}
+#wrapper > #content p {
+	margin: 10px 0 0 0;
+	font-size: .8em;
+}
+</style>
+<script>
+$(document).ready(function() {
+	$('#content h1').tipLite();
+	$('#content p').not(':eq(0)').tipLite({fadeSpeed: 100});
+});
+</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="content">
+			<h1 title="This is a tooltip, yay!">Title with tooltip</h1>
+			<p title="A title, yo!">This text has no tooltip, but it has a title</p>
+			<p title="All your base are belong to us!">This one does.</p>
+			<p title="This tooltip is even bigger than everything you ever considered existing in all of mankind's history! Not.">This one too, but a bigger one.</p>
+		</div>
+	</div>
+</body>
+</html>
