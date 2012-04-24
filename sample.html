@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	<script src="http://www.google.com/jsapi"></script>
 	<script>
-		google.load("jquery", "1.6");
+		google.load("jquery", "1.7");
 	</script>
 
 	<script src="tiplite.js"></script>
@@ -56,7 +56,8 @@ html,body {
 <script>
 $(document).ready(function() {
 	$('#content h1').tipLite();
-	$('#content p').not(':eq(0)').tipLite({fadeSpeed: 100});
+	$('#content p').not(':eq(0),:last-child').tipLite({fadeSpeed: 100});
+	$('#content p:last-child').tipLite({staticPosition: 'bottom'});
 });
 </script>
 
@@ -68,6 +69,7 @@ $(document).ready(function() {
 			<p title="A title, yo!">This text has no tooltip, but it has a title</p>
 			<p title="All your base are belong to us!">This one does.</p>
 			<p title="This tooltip is even bigger than everything you ever considered existing in all of mankind's history! Not.">This one too, but a bigger one.</p>
+			<p title="Looks Awesome, right?">This one has a "statically" positioned one, below this very dedscriptive text.</p>
 		</div>
 	</div>
 </body>
