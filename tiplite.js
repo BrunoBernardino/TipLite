@@ -1,5 +1,5 @@
 /***
-LiteTip by Bruno Bernardino - www.brunobernardino.com
+TipLite by Bruno Bernardino - www.brunobernardino.com
 v1.1 - 2012/04/24
 ***/
 jQuery.fn.tipLite = function(options) {
