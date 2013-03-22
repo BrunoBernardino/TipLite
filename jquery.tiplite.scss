@@ -1,4 +1,4 @@
-#tipLite {
+.tipLite {
 	background: #000;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -13,8 +13,8 @@
 	max-width: 160px;
 	display: none;
 	font-weight: normal;
-	
+
 	zoom: 1;
-	filter:alpha(opacity=80);
+	filter: alpha(opacity=80);
 	opacity: 0.8;
 }

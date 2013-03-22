@@ -1,0 +1,1 @@
+(function(){$("h1").tipLite();$("p:eq(1)").tipLite({animationType:"slide",followMouse:!1});$("p:eq(2), p:eq(3)").tipLite({followMouse:!1})}).call(this);

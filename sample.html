@@ -1,76 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>tipLite - a Lightweight &amp; Simple jQuery Tooltip plugin</title>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta http-equiv="Content-Language" content="en_US" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<script src="http://www.google.com/jsapi"></script>
-	<script>
-		google.load("jquery", "1.7");
-	</script>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<script src="tiplite.js"></script>
-	<link rel="stylesheet" href="tiplite.css" media="all" />
-
-<style>
-* {
-	margin: 0;
-	padding: 0;
-	outline: none;
-	border: none;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 1em;
-	color: #666;
-}
-html,body {
-	width: 100%;
-	background: #FFFFFF;
-}
-#wrapper {
-	margin: 50px auto;
-	width: 600px;
-	background: #EFEFEF;
-	display: block;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-}
-#wrapper > #content {
-	padding: 10px;
-	display: block;
-}
-#wrapper > #content h1 {
-	padding: 10px;
-	display: block;
-	font-weight: bold;
-	font-size: 1.2em;
-	color: #999;
-	text-align: center;
-}
-#wrapper > #content p {
-	margin: 10px 0 0 0;
-	font-size: .8em;
-}
-</style>
-<script>
-$(document).ready(function() {
-	$('#content h1').tipLite();
-	$('#content p').not(':eq(0),:last-child').tipLite({fadeSpeed: 100});
-	$('#content p:last-child').tipLite({staticPosition: 'bottom'});
-});
-</script>
-
+	<link rel="stylesheet" href="sample.css" media="all" />
+	<link rel="stylesheet" href="jquery.tiplite.css" media="all" />
 </head>
 <body>
-	<div id="wrapper">
-		<div id="content">
-			<h1 title="This is a tooltip, yay!">Title with tooltip</h1>
+	<div class="wrapper">
+		<div class="content">
+			<h1 data-tiplite="This is a tooltip, yay!" data-tiplite-position="below">Title with tooltip</h1>
 			<p title="A title, yo!">This text has no tooltip, but it has a title</p>
-			<p title="All your base are belong to us!">This one does.</p>
+			<p data-tiplite="All your base are belong to us!" data-tiplite-position="right">This one does.</p>
 			<p title="This tooltip is even bigger than everything you ever considered existing in all of mankind's history! Not.">This one too, but a bigger one.</p>
-			<p title="Looks Awesome, right?">This one has a "statically" positioned one, below this very dedscriptive text.</p>
+			<p data-tiplite="Looks Awesome, right?" data-tiplite-position="below">This one has a positioned one, below this very descriptive text.</p>
 		</div>
 	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="jquery.tiplite.min.js"></script>
+	<script src="sample.js"></script>
 </body>
 </html>
