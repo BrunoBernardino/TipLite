@@ -8,7 +8,7 @@ It's built off of Chapter 3 of Pro jQuery Plugins ( http://projqueryplugins.com 
 
 Get https://raw.github.com/BrunoBernardino/TipLite/master/jquery.tiplite.min.js and https://raw.github.com/BrunoBernardino/TipLite/master/jquery.tiplite.css, include them in your site and call the following (supposing you'd want tooltips on all img elements):
 
->> $("img").tipLite();
+> $("img").tipLite();
 
 ## Features
 
